@@ -19,10 +19,10 @@ const TopView = ({ originalsData = [], img_base_url }) => {
     return (
         <div className={`app-bar ${displayScrollEffect && "container"}`}>
             <label className="app-bar-labels" >
-                {"Ankit Constructions"}
+                {"New Howrah Constructions"}
             </label>
             <label style={{ right: "20px" }} className="app-bar-labels">
-                {"Kolkata-12345"}
+                {"9836009826"}
             </label>
         </div>
     )

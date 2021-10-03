@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import NetflixApplication from './startup/NetflixApplication';
+import NorthHowrahApplication from './startup/NorthHowrahApplication';
 import './index.css';
 
 ReactDOM.render(
-  <NetflixApplication />,
+  <NorthHowrahApplication />,
   document.getElementById('root')
 );

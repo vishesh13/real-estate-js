@@ -1,8 +1,5 @@
 import React from 'react';
 import MainView from '../views/MainView';
-import { bindActionCreators } from 'redux';
-import { connect } from 'react-redux';
-import * as netflixActions from '../../actions/netflixAction';
 
 /**
  * Container class having rendered movie rows 
@@ -12,40 +9,25 @@ class RealStateContainer extends React.Component {
     constructor(props) {
         super(props);
         this.handleLoginRequest = this.handleLoginRequest.bind(this);
+        this.handleDisplayContactForm = this.handleDisplayContactForm.bind(this);
+        this.state = {
+            displayContactForm: false,
+        }
     }
 
-
-    componentDidMount() {
-        const { netflixActions } = this.props;
-            netflixActions.loadMovieDetails();
-    }
-
-    /**
-     * handler method to make login request
-     */
-    handleLoginRequest() {
-        const { netflixActions } = this.props;
-        netflixActions.loginUser();
+    handleDisplayContactForm(value) {
+        this.setState({
+            displayContactForm: value,
+        });
     }
 
     render() {
-        const { isLoading, details = [] } = this.props;
-        let content = <MainView  />;
+
         return (
-            content
+            <MainView displayContactForm={this.state.displayContactForm}
+                handleDisplayContactForm={this.handleDisplayContactForm} />
         );
     }
 }
 
-const mapStateToProps = state => {
-    return {
-        details: state.details,
-        isLoading: state.isLoading,
-    }
-};
-
-const mapDispatchToProps = dispatch => ({
-    netflixActions: bindActionCreators(netflixActions, dispatch),
-});
-
-export default connect(mapStateToProps, mapDispatchToProps)(RealStateContainer);
+export default RealStateContainer;

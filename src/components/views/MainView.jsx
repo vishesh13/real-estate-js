@@ -1,8 +1,10 @@
 import React from 'react';
-import { requests } from '../../helpers/utilities';
 import TopView from './TopView';
 import HeaderView from './HeaderView';
+import OurMissionView from './OurMissionView';
 import ProjectInfoView from './ProjectInfoView';
+import ContactView from './ContactView';
+import ContactFormView from './ContactFormView';
 import './stylesheet.css';
 
 /**
@@ -10,12 +12,15 @@ import './stylesheet.css';
  * @param details 
  */
 const MainView = (props) => {
-    const img_base_url = 'https://image.tmdb.org/t/p/original';
+    const { displayContactForm, handleDisplayContactForm } = props;
     return (
         <div className="container">
             <TopView />
-            <HeaderView img_base_url={img_base_url} />
+            <HeaderView handleDisplayContactForm={handleDisplayContactForm} />
+            <OurMissionView />
             <ProjectInfoView />
+            <ContactView />
+            <ContactFormView displayContactForm={displayContactForm} handleDisplayContactForm={handleDisplayContactForm} />
         </div>
     )
 }
