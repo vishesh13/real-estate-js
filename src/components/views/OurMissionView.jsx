@@ -3,9 +3,9 @@ import './stylesheet.css';
 
 const OurMissionView = () => {
     return (
-        <div className="proj-block-container">
-            <div className="proj-info-container">
-                <h3>Views</h3>
+        <div className="mission-block-container">
+            <div className="mission-header-container">
+                <h2>Views</h2>
             </div>
             <div className="card">
                 <h4>Our Mission</h4>

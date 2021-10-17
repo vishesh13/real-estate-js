@@ -17,14 +17,17 @@ const TopView = ({ originalsData = [], img_base_url }) => {
         }
     }, []);
     return (
-        <div className={`app-bar ${displayScrollEffect && "container"}`}>
-            <label className="app-bar-labels" >
-                {"New Howrah Constructions"}
-            </label>
-            <label style={{ right: "20px" }} className="app-bar-labels">
-                {"9836009826"}
-            </label>
-        </div>
+        <React.Fragment>
+            <div className={`app-bar ${displayScrollEffect && "container"}`}>
+                <label className="app-bar-labels" >
+                    {"New Howrah Constructions"}
+                </label>
+                <label style={{ right: "20px" }} className="app-bar-labels">
+                    {"9836009826"}
+                </label>
+            </div>
+            {/* <hr style={{ border: "1px solid black" }} /> */}
+        </React.Fragment>
     )
 }
 

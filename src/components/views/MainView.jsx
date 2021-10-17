@@ -12,15 +12,20 @@ import './stylesheet.css';
  * @param details 
  */
 const MainView = (props) => {
-    const { displayContactForm, handleDisplayContactForm } = props;
+    const { displayContactForm, handleDisplayContactForm, handleInputChange, handleSendEmail } = props;
     return (
         <div className="container">
             <TopView />
             <HeaderView handleDisplayContactForm={handleDisplayContactForm} />
             <OurMissionView />
             <ProjectInfoView />
-            <ContactView />
-            <ContactFormView displayContactForm={displayContactForm} handleDisplayContactForm={handleDisplayContactForm} />
+            <ContactView handleSendEmail={handleSendEmail} />
+            <ContactFormView
+                displayContactForm={displayContactForm}
+                handleDisplayContactForm={handleDisplayContactForm}
+                handleInputChange={handleInputChange}
+                handleSendEmail={handleSendEmail}
+            />
         </div>
     )
 }

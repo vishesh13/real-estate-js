@@ -15,7 +15,10 @@ const HeaderView = (props) => {
     return (
         <header className="header-container">
             <div className="header-contents">
-                <h1 className="header-content-title">New Howrah Constructions</h1>
+                <h1 className="header-content-title">
+                    New Howrah Constructions
+                </h1>
+                <p className="sub-header">BUILDING DREAM HOME SINCE 1991</p>
                 <div className="header-content-buttons">
                     <button className="header-content-button" onClick={() => handleDisplayContactForm(true)}>
                         Contact US

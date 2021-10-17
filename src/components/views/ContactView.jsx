@@ -8,10 +8,12 @@ import './stylesheet.css';
 
 const ContactView = () => {
     return (
-        <div className="conatct-block-container">
-            <label className="p-col-fixed" style={{ width: '100px' }}>
-                Connect With Us
-            </label>
+        <div className="contact-block-container">
+            <div className="contact-header-container" style={{ marginBottom: "3%" }}>
+                <h2>
+                    Connect With Us
+                </h2>
+            </div>
             <div className="p-formgroup-inline">
                 <div className="p-field">
                     <InputText id="NAME_INLINE" type="text" placeholder="Your Name" />
@@ -35,7 +37,7 @@ const ContactView = () => {
                     </div>
                 </div>
             </div>
-            <Button type="button" label="Send" />
+            <Button type="button" label="Send" style={{ backgroundColor: "#2fbd80", border: "none" }} />
         </div>
     );
 }
