@@ -18,7 +18,7 @@ const OurMissionView = () => {
                     home to be the happiest on earth.
                 </p>
 
-                <h4>Our Vision</h4>
+                <h4 style={{ marginTop: "2%" }}>Our Vision</h4>
                 <p>
                     Since its incorporation, the company is leveraging on sustainable development. Its vision is to
                     become one of the respected real estate developers in India by winning customer hearts.

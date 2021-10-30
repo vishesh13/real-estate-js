@@ -15,11 +15,6 @@ class RealStateContainer extends React.Component {
         this.state = {
             displayContactForm: false,
             emailDetails: {},
-            // name: '',
-            // email: '',
-            // phone: '',
-            // project: '',
-            // message: '',
         };
     }
 

@@ -9,35 +9,25 @@ import './stylesheet.css';
 const ContactView = () => {
     return (
         <div className="contact-block-container">
-            <div className="contact-header-container" style={{ marginBottom: "3%" }}>
+            <div className="contact-header-container">
                 <h2>
                     Connect With Us
                 </h2>
             </div>
-            <div className="p-formgroup-inline">
-                <div className="p-field">
-                    <InputText id="NAME_INLINE" type="text" placeholder="Your Name" />
-                </div>
-                <div className="p-field">
+            <React.Fragment>
+                <div className="form-col">
+                    <InputText id="NAME_INLINE" type="text" placeholder="Your Name" style={{ marginRight: "2%" }} />
                     <InputText id="EMAIL_INLINE" type="text" placeholder="Email" />
                 </div>
-                <div className="p-field">
-                    <InputText id="PHONE_INLINE" type="text" placeholder="Phone" />
+                <div className="form-col">
+                    <InputText id="PHONE_INLINE" type="text" placeholder="Phone" style={{ marginRight: "2%" }} />
+                    <InputText id="PROJECT" type="text" placeholder="Project" />
                 </div>
-                {/* </div> */}
-                {/* <div className="p-formgroup-inline"> */}
-                <div className="p-field p-grid">
-                    <div className="p-col">
-                        <InputText id="PROJECT" type="text" placeholder="Project" />
-                    </div>
+                <div className="form-col">
+                    <InputTextarea id="MESSAGE" type="text" placeholder="Message" rows={5} cols={30} autoResize />
+                    <Button type="button" label="Send" id="SEND_QUERY_BTN" />
                 </div>
-                <div className="p-field p-grid">
-                    <div className="p-col">
-                        <InputTextarea id="MESSAGE" type="text" placeholder="Message" rows={5} cols={30} autoResize />
-                    </div>
-                </div>
-            </div>
-            <Button type="button" label="Send" style={{ backgroundColor: "#2fbd80", border: "none" }} />
+            </React.Fragment>
         </div>
     );
 }

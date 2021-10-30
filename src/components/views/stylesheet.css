@@ -14,25 +14,11 @@
     z-index: 1;
     transition-timing-function: ease-in;
     transition: all .5s;
-    background: #1a75bb;
-}
-
-.header-container {
-    background-size: cover;
-    background-position: center inherit;
-    color: #212529;
-    object-fit: contain;
-    height: 60vh;
-}
-
-.sub-header {
-    font-size: 0.8rem;
-    font-weight: 800;
-    padding-bottom: 0.3rem;
+    background: #fed835;
 }
 
 .app-bar-labels {
-    color: #fbfffd;
+    color: #1d1d1f;
     outline: none;
     border: none;
     font-weight: 700;
@@ -41,10 +27,25 @@
     position: fixed;
 }
 
+.header-container {
+    background-size: cover;
+    background: #fed835;
+    background-position: center inherit;
+    color: #1d1d1f;
+    object-fit: contain;
+    /* height: 60vh; */
+}
+
+.sub-header {
+    font-size: 0.8rem;
+    font-weight: 800;
+    padding-bottom: 0.3rem;
+}
+
 .header-contents {
     margin-left: 30px;
     padding-top: 140px;
-    height: 190px;
+    /* height: 190px; */
 }
 
 .header-content-title {
@@ -55,14 +56,14 @@
 
 .header-content-button {
     cursor: pointer;
-    color: #fbfffd;
+    color: #1d1d1f;
     outline: none;
-    border: none;
     font-weight: 700;
     border-radius: 0.2vw;
     padding: .5rem 2rem;
     margin-right: 1rem;
-    background-color: #1a75bb;
+    background-color: #fed835;
+    border: 2px solid #1d1d1f;
 }
 
 .header-content-button:hover {
@@ -72,12 +73,14 @@
 }
 
 .header-content-description {
-    width: 45rem;
+    width: 75%;
     line-height: 1.3;
     padding-top: 1rem;
     font-size: 0.8rem;
 }
 
+
+/** Check once */
 .row-container {
     color: #fff;
     margin-left: 20px;
@@ -118,43 +121,30 @@
 ** New ones
 */
 .mission-block-container {
-    margin: 2%;
-    padding: 2%;
-    background: #1a75bb;
+    padding: 2% 2% 4% 2%;
+    background: #fed835;
     position: relative;
     box-shadow: 1px 2px rgb(0 0 0 / 10%);
-    /* height: 30vh; */
-    border-radius: 8px;
-    color: #fbfffd;
+    color: #1d1d1f;
 }
 
 .mission-header-container {
-    background: #1a75bb;
-    position: relative;
-    /* box-shadow: 1px 2px rgb(0 0 0 / 10%); */
-    /* text-align: center; */
-}
-
-.contact-header-container {
-    background: white;
-    position: relative;
-    /* box-shadow: 1px 2px rgb(0 0 0 / 10%); */
-    /* text-align: center; */
+    font-size: 1.2rem;
+    font-weight: 700;
 }
 
 .info-block-container {
-    margin: 2%;
+    /* margin: 2%; */
     padding: 2%;
-    background: #fbfffd;
+    background: #f2f2f2;
     position: relative;
     box-shadow: 1px 2px rgb(0 0 0 / 10%);
     /* height: 30vh; */
     border-radius: 8px;
-    color: #1a75bb;
+    color: #242426;
 }
 
 .info-header-container {
-    background: white;
     position: relative;
     /* box-shadow: 1px 2px rgb(0 0 0 / 10%); */
     /* text-align: center; */
@@ -164,17 +154,21 @@
     margin: 2% 5% 2% 0%;
 }
 
+.card .p-tabview .p-tabview-nav {
+    background: #f2f2f2;
+    border: none;
+}
 .p-tabview.p-component .p-tabview-nav {
-    background: #fbfffd;
     align-content: center;
 }
 
+
 .card .p-tabview .p-tabview-nav li .p-tabview-nav-link {
-    background: #fbfffd;
+    background: #f2f2f2;
 }
 
 .card .p-tabview .p-tabview-nav li.p-highlight .p-tabview-nav-link {
-    background: #1a75bb;
+    background: #1d1d1f;
     border: none;
     color: #fbfffd;
 }
@@ -182,7 +176,7 @@
 .card .p-tabview .p-tabview-nav li .p-tabview-nav-link:not(.p-disabled):focus {
     outline: 0 none;
     outline-offset: 0;
-    box-shadow: 0 0 0 0.1rem #0000;
+    box-shadow: 0 0 0 0.1rem #1d1d1f;
 }
 
 .card .p-tabview .p-tabview-panels {
@@ -193,18 +187,28 @@
     width: 15rem;
 }
 
-.contact-block-container {
-    margin: 2%;
-    padding: 2%;
-    background: white;
+.contact-header-container {
     position: relative;
-    box-shadow: 1px 2px rgb(0 0 0 / 10%);
-    /* height: 30vh; */
-    border-radius: 8px;
+    position: relative;
+    color: #fbfffd;
+    margin-bottom: 3%;
 }
 
-.form-send-btn .p-button {
-    color: #ffffff;
-    background-color: rgba(51, 51, 51, 0.5);
-    border-color: rgba(51, 51, 51, 0.5);
+.contact-block-container {
+    padding: 2%;
+    background: #1d1d1f;
+    position: relative;
+    box-shadow: 1px 2px rgb(0 0 0 / 10%);
+}
+
+.form-col {
+    padding: 0.5rem;
+}
+
+#SEND_QUERY_BTN {
+    left: 3%;
+    margin-bottom: 3%;
+    background-color: #f2f2f2;
+    border: none;
+    color: #1d1d1f;
 }
