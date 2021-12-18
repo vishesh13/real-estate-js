@@ -19,16 +19,21 @@ const TopView = () => {
     return (
         <React.Fragment>
             <div className={`app-bar ${displayScrollEffect && "container"}`}>
-            <img style={{ position: "fixed", objectFit: "contain", right: "20px", width: "30px" }}
-                src="/images/icons/homeicon.jpeg" alt="Home" />
-                <label className="app-bar-labels" >
-                    {"New Howrah Constructions"}
-                </label>
-                <label style={{ right: "20px" }} className="app-bar-labels">
-                    {"9836009826"}
-                </label>
+                <div>
+                    <img className="app-bar-home-icon"
+                        src="/images/icons/homeicon.png" alt="Home" />
+                    <label className="app-bar-labels" >
+                        {"New Howrah Constructions"}
+                    </label>
+                </div>
+                <div>
+                    <img className="app-bar-call-icon"
+                        src="/images/icons/call.png" alt="Home" />
+                    <label style={{ right: "20px" }} className="app-bar-labels">
+                        {"9836009826"}
+                    </label>
+                </div>
             </div>
-            {/* <hr style={{ border: "1px solid black" }} /> */}
         </React.Fragment>
     )
 }

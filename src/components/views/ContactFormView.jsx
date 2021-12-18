@@ -13,7 +13,8 @@ const ContactFormView = (props) => {
         <React.Fragment>
             <Dialog header="Enquiry Form" visible={displayContactForm} modal={false} style={{
                 width: '35vw',
-                border: "2px solid black"
+                border: "2px solid black",
+                color: "#1d1d1f"
             }}
                 onHide={() => handleDisplayContactForm(false)}>
                 <div className="p-field p-grid">
