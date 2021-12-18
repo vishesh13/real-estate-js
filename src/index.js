@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import NorthHowrahApplication from './startup/NorthHowrahApplication';
+import NewHowrahApplication from './startup/NewHowrahApplication';
 import './index.css';
 
 ReactDOM.render(
-  <NorthHowrahApplication />,
+  <NewHowrahApplication />,
   document.getElementById('root')
 );

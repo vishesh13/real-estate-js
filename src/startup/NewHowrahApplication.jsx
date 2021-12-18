@@ -2,9 +2,9 @@ import React from 'react';
 import RealStateContainer from '../components/containers/RealStateContainer';
 
 /**
- * Netflix Application class rendering the container
+ * NewHowrahApplication Application class rendering the container
  */
-class NorthHowrahApplication extends React.Component {
+class NewHowrahApplication extends React.Component {
     render() {
         return (
             <RealStateContainer />
@@ -12,4 +12,4 @@ class NorthHowrahApplication extends React.Component {
     }
 }
 
-export default NorthHowrahApplication;
+export default NewHowrahApplication;
