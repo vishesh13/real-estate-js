@@ -1,5 +1,5 @@
 import React from 'react';
-import emailjs from 'emailjs-com';
+// import emailjs from 'emailjs-com';
 import MainView from '../views/MainView';
 
 /**
@@ -38,15 +38,15 @@ class RealStateContainer extends React.Component {
     handleSendEmail(e) {
         e.preventDefault();
 
-        emailjs.send('service_cgburhe', 'template_pqqfakc', this.state.emailDetails, 'user_EpUgqoDGBiiBVCZ4UnLYP')
-            .then((result) => {
-                // console.log(result.text);
-                this.setState({
-                    displayContactForm: false,
-                });
-            }, (error) => {
-                console.log(error.text);
-            });
+        // emailjs.send('service_cgburhe', 'template_pqqfakc', this.state.emailDetails, 'user_EpUgqoDGBiiBVCZ4UnLYP')
+        //     .then((result) => {
+        //         // console.log(result.text);
+        //         this.setState({
+        //             displayContactForm: false,
+        //         });
+        //     }, (error) => {
+        //         console.log(error.text);
+        //     });
     }
 
     render() {
