@@ -9,7 +9,8 @@
     "primereact": "^6.5.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "react-scripts": "0.9.5"
+    "react-scripts": "0.9.5",
+    "react-transition-group": "^4.4.2"
   },
   "devDependencies": {
     "gh-pages": "^2.2.0",
