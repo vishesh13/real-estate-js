@@ -1,15 +1,13 @@
 {
-  "homepage": "https://vishesh13.github.io/newhowrah",
+  "homepage": "https://vishesh13.github.io/real-estate-js",
   "name": "newhowrah",
   "version": "1.0.0",
   "private": true,
   "dependencies": {
-    "bootstrap": "^5.1.0",
     "primeflex": "2.0.0",
     "primeicons": "^4.1.0",
     "primereact": "^6.5.1",
     "react": "^16.12.0",
-    "react-bootstrap": "^2.0.0-beta.5",
     "react-dom": "^16.12.0",
     "react-scripts": "0.9.5"
   },
