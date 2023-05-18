@@ -1,0 +1,31 @@
+:root {
+    --primary: #3a5fc7;
+    --secondary: #80a4ff;
+    --placeholder: #cfd5e6;
+    --link: #098ae6;
+    --green: #48b57b;
+    --white: #ffffff;
+    --backgroundWhite: #fcfffe;
+    --stroke: #e6edff;
+    --shadow: #2b48951a;
+    --highlight: #cfd5e680;
+    --darkBlue: #2b4895;
+    --black: #4d4d4d;
+    --darkBrown: #505359;
+    --red: #ff0000;
+  
+    --spacing-xxs: 0.25rem;
+    --spacing-xs: 0.5rem;
+    --spacing-s: 1rem;
+    --spacing-m: 1.25rem;
+    --spacing-l: 1.5rem;
+    --spacing-xl: 1.875rem;
+    --spacing-xxl: 2.25rem;
+    --spacing-xxxl: 3rem;
+  }
+  
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
