@@ -38,12 +38,13 @@ const Projects = () => {
       />
       <div style={{ zIndex: 999 }}>
         <Text
-          size={42}
+          size="xxxl"
+          weight="semibold"
           style={{
             textAlign: "center",
             margin: "0 240px",
             lineHeight: 1.2,
-            marginBottom: spacing.xxxl,
+            marginBottom: spacing.l,
           }}
         >
           Our Projects

@@ -9,7 +9,7 @@ const NavigationBar = () => {
   return (
     <NavBar
       component="nav"
-      sx={{ background: displayScrollEffect ? colors.black : colors.white, }}
+      sx={{ background: colors.white, }}
     >
       <Container>
         <Toolbar disableGutters>
