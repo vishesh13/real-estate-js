@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 42 42">
+  <g id="Group_3848" data-name="Group 3848" transform="translate(-209 -657)">
+    <g id="Group_3806" data-name="Group 3806" transform="translate(2 273)">
+      <g id="Rectangle_3202" data-name="Rectangle 3202" transform="translate(207 384)" fill="#fff" stroke="#e0e0e0" stroke-width="1">
+        <rect width="42" height="42" rx="21" stroke="none"/>
+        <rect x="0.5" y="0.5" width="41" height="41" rx="20.5" fill="none"/>
+      </g>
+    </g>
+    <g id="arrow_back_black_24dp" transform="translate(218 666)">
+      <path id="Path_7737" data-name="Path 7737" d="M0,0H24V24H0Z" fill="none"/>
+      <path id="Path_7738" data-name="Path 7738" d="M20,11H7.83l5.59-5.59L12,4,4,12l8,8,1.41-1.41L7.83,13H20Z" fill="#2b4895"/>
+    </g>
+  </g>
+</svg>

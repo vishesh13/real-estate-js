@@ -21,7 +21,7 @@
     "build": "react-scripts build",
     "clean:all": "rimraf ./package-lock.json && rimraf ./node_modules",
     "clean:install": "npm run clean:all && npm install",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages-clean gh-pages -d build",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "start": "react-scripts start",
