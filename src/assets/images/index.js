@@ -1,6 +1,6 @@
 export const images = {
     clock: require("./clock.png"),
-    coverproj: require("./cover.jpg"),
+    coverproj: require("./cover.jpeg"),
     coverjpg: require("./shekpara.jpeg"),
     multiCarousel: {
         left: require("./multi-carousel/left.png"),
