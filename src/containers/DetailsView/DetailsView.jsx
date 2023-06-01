@@ -3,6 +3,8 @@ import { styled } from "@mui/material/styles";
 
 import ContactFormView from "../ContactFormView";
 
+import checkIsMobile from "../../utils/checkMobile";
+
 import { images } from "../../assets/images";
 import { Text } from "../../components/atoms"
 import { colors, spacing } from "../../styles";
@@ -11,11 +13,19 @@ import { colors, spacing } from "../../styles";
  * Details View about organisation
  */
 const DetailsView = () => {
-    return (
-        <Grid container columnSpacing={spacing.s}
-            sx={{ marginTop: spacing.l, paddingTop: spacing.xl, marginLeft: spacing.l }}
-        >
+    const isMobile = checkIsMobile();
 
+    return (
+        <Grid
+            id="DETAILS_VIEW_CONTAINER_GRID"
+            container
+            columnSpacing={spacing.s}
+            sx={{
+                marginTop: spacing.l,
+                paddingTop: spacing.xl,
+                marginLeft: isMobile ? spacing.s : spacing.l
+            }}
+        >
             <Grid item md={5} sx={{ marginTop: spacing.l }}>
                 <Card
                     style={{
@@ -56,34 +66,33 @@ const DetailsView = () => {
                     <ContactFormView />
                 </Card>
             </Grid>
-
-
-            <Grid item md={6}>
-
-                <Card
-                    style={{
-                        backgroundImage: `url(${images.coverproj})`,
-                        backgroundPosition: "center",
-                        backgroundRepeat: "no-repeat",
-                        backgroundSize: "cover",
-                        borderRadius: spacing.m,
-                        height: "80vh",
-                        position: "relative",
-                    }}
-                >
-                    <InfoDiv>
-                        <Text size="xl" weight="bold" color={colors.blackText} style={{ marginBottom: spacing.xs }}>
-                            Our Mission
-                        </Text>
-                        <Text size="m" weight="semibold" color={colors.blackText}>
-                            We all know nuclear families has evolved in every city. This is how our company comes into the picture by providing small flats at low cost, mostly starting from 15 Lakhs +. <br/>
-                            <br/>
-                            We are a real estate company that focuses on Housing for All. This Company is always in research process, how to fulfil the customers aspiration with limited earnings. It is not always the luxury, but some private space for their families they want. We want customers to be happy and their dream home to be the happiest on earth.
-                        </Text>
-                    </InfoDiv>
-                </Card>
-
-            </Grid>
+            
+            {!isMobile &&
+                <Grid item md={6}>
+                    <Card
+                        style={{
+                            backgroundImage: `url(${images.coverproj})`,
+                            backgroundPosition: "center",
+                            backgroundRepeat: "no-repeat",
+                            backgroundSize: "cover",
+                            borderRadius: spacing.m,
+                            height: "80vh",
+                            position: "relative",
+                        }}
+                    >
+                        <InfoDiv>
+                            <Text size="xl" weight="bold" color={colors.blackText} style={{ marginBottom: spacing.xs }}>
+                                Our Mission
+                            </Text>
+                            <Text size="m" weight="semibold" color={colors.blackText}>
+                                We all know nuclear families has evolved in every city. This is how our company comes into the picture by providing small flats at low cost, mostly starting from 15 Lakhs +. <br />
+                                <br />
+                                We are a real estate company that focuses on Housing for All. This Company is always in research process, how to fulfil the customers aspiration with limited earnings. It is not always the luxury, but some private space for their families they want. We want customers to be happy and their dream home to be the happiest on earth.
+                            </Text>
+                        </InfoDiv>
+                    </Card>
+                </Grid>
+            }
         </Grid>
     )
 }

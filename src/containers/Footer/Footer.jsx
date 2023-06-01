@@ -5,10 +5,14 @@ import PhoneIcon from '@mui/icons-material/Phone';
 import EmailIcon from '@mui/icons-material/Email';
 import PlaceIcon from '@mui/icons-material/Place';
 
+import checkIsMobile from "../../utils/checkMobile";
+
 import { Text, TextInput } from "../../components/atoms";
 import { colors, spacing, styleUtils, textSizes, typography } from "../../styles";
 
 const Footer = () => {
+  const isMobile = checkIsMobile();
+
   return (
     <div
       style={{
@@ -77,7 +81,6 @@ const Footer = () => {
               </ScrolledTextContainer>
             </Card>
 
-
             <Card
               style={{
                 background: colors.white,
@@ -109,8 +112,8 @@ const Footer = () => {
                   weight="meidum"
                   style={{ marginTop: spacing.xs, display: "inline-flex" }}
                 >
-                  <PlaceIcon color="#808080" style={{ marginRight: spacing.xs }} /> Ishanika Developers Pvt. Ltd. <br/>
-                  16/1 India Exchange Place Kolkata-700001. <br/>
+                  <PlaceIcon color="#808080" style={{ marginRight: spacing.xs }} /> Ishanika Developers Pvt. Ltd. <br />
+                  16 India Exchange Place Kolkata-700001. <br />
                   Landmark: Calcutta Stock Exchange
                 </Text>
               </Box>
@@ -122,7 +125,7 @@ const Footer = () => {
                   weight="meidum"
                   style={{ marginTop: spacing.xs, display: "inline-flex" }}
                 >
-                  <PhoneIcon color="#808080" style={{ marginRight: spacing.xs }} /> 9148967013
+                  <PhoneIcon color="#808080" style={{ marginRight: spacing.xs }} /> 8588022019/9836009826
                 </Text>
               </Box>
 
@@ -139,54 +142,54 @@ const Footer = () => {
               </Box>
             </Card>
           </Grid>
-          <Grid item md={6}>
 
-            <Card
-              style={{
-                marginLeft: spacing.xxl,
-                borderRadius: spacing.m,
-                background: "#fed835",
-                padding: "2rem 1rem 1rem 6rem",
-              }}
-            >
-
-              <Text
-                color={colors.blackText}
-                size="xxl"
-                weight="bold"
-                style={{ lineHeight: 1.2, marginBottom: spacing.s }}
+          {!isMobile &&
+            <Grid item md={6}>
+              <Card
+                style={{
+                  marginLeft: spacing.xxl,
+                  borderRadius: spacing.m,
+                  background: "#fed835",
+                  padding: "2rem 1rem 1rem 6rem",
+                }}
               >
-                WE’D LOVE TO HEAR FROM YOU.
-              </Text>
-              <FormControl variant="standard">
+                <Text
+                  color={colors.blackText}
+                  size="xxl"
+                  weight="bold"
+                  style={{ lineHeight: 1.2, marginBottom: spacing.s }}
+                >
+                  WE’D LOVE TO HEAR FROM YOU.
+                </Text>
+                <FormControl variant="standard">
 
-                <StyledFormLabel>
-                  Your Name
-                </StyledFormLabel>
-                <StyleTextInput
-                  name="fullName"
-                  //   value={formik.values.fullName}
-                  //   onChange={formik.handleChange}
-                  //   error={formik.touched.fullName && Boolean(formik.errors.fullName)}
-                  placeholder="Your Name*"
-                />
-                {/* {formik.touched.fullName && Boolean(formik.errors.fullName) && (
+                  <StyledFormLabel>
+                    Your Name
+                  </StyledFormLabel>
+                  <StyleTextInput
+                    name="fullName"
+                    //   value={formik.values.fullName}
+                    //   onChange={formik.handleChange}
+                    //   error={formik.touched.fullName && Boolean(formik.errors.fullName)}
+                    placeholder="Your Name*"
+                  />
+                  {/* {formik.touched.fullName && Boolean(formik.errors.fullName) && (
           <FormHelperText className="form-error-field">
             {formik.errors.fullName}
           </FormHelperText>
         )} */}
 
-                <StyledFormLabel>
-                  Email
-                </StyledFormLabel>
-                <StyleTextInput
-                  name="email"
-                  //   value={formik.values.email}
-                  //   onChange={formik.handleChange}
-                  //   error={formik.touched.email && Boolean(formik.errors.email)}
-                  placeholder="Your Email*"
-                />
-                {/* {formik.touched.email && Boolean(formik.errors.email) && (
+                  <StyledFormLabel>
+                    Email
+                  </StyledFormLabel>
+                  <StyleTextInput
+                    name="email"
+                    //   value={formik.values.email}
+                    //   onChange={formik.handleChange}
+                    //   error={formik.touched.email && Boolean(formik.errors.email)}
+                    placeholder="Your Email*"
+                  />
+                  {/* {formik.touched.email && Boolean(formik.errors.email) && (
           <FormHelperText className="form-error-field">
             {formik.errors.email}
           </FormHelperText>
@@ -194,43 +197,43 @@ const Footer = () => {
 
 
 
-                <StyledFormLabel>
-                  Mobile
-                </StyledFormLabel>
-                <StyleTextInput
-                  name="phone number"
-                  //   value={formik.values.fullName}
-                  //   onChange={formik.handleChange}
-                  //   error={formik.touched.fullName && Boolean(formik.errors.fullName)}
-                  placeholder="Your Mobile*"
-                />
+                  <StyledFormLabel>
+                    Mobile
+                  </StyledFormLabel>
+                  <StyleTextInput
+                    name="phone number"
+                    //   value={formik.values.fullName}
+                    //   onChange={formik.handleChange}
+                    //   error={formik.touched.fullName && Boolean(formik.errors.fullName)}
+                    placeholder="Your Mobile*"
+                  />
 
-                <StyledFormLabel>
-                  Message
-                </StyledFormLabel>
-                <StyleTextInput
-                  name="note"
-                  placeholder="Message"
-                  //   onChange={handleNoteChange}
-                  inputProps={{ style: { height: 210, overflow: "auto" } }}
-                  multiline
-                  sx={{
-                    // width: styleUtils.pxToRem(isMobile ? "304px" : "432px"),
-                    // height: styleUtils.pxToRem("159px"),
-                  }}
-                />
-                <SubmitBtn
-                  variant="contained"
-                  sx={{
-                    height: styleUtils.pxToRem("50px"),
-                  }}
-                >
-                  Submit
-                </SubmitBtn>
-              </FormControl>
-            </Card>
-
-          </Grid>
+                  <StyledFormLabel>
+                    Message
+                  </StyledFormLabel>
+                  <StyleTextInput
+                    name="note"
+                    placeholder="Message"
+                    //   onChange={handleNoteChange}
+                    inputProps={{ style: { height: 210, overflow: "auto" } }}
+                    multiline
+                    sx={{
+                      // width: styleUtils.pxToRem(isMobile ? "304px" : "432px"),
+                      // height: styleUtils.pxToRem("159px"),
+                    }}
+                  />
+                  <SubmitBtn
+                    variant="contained"
+                    sx={{
+                      height: styleUtils.pxToRem("50px"),
+                    }}
+                  >
+                    Submit
+                  </SubmitBtn>
+                </FormControl>
+              </Card>
+            </Grid>
+          }
         </Grid>
       </Container>
     </div>

@@ -11,14 +11,14 @@ import {
 } from "@mui/material";
 
 import { styled } from "@mui/material/styles";
-
+import checkIsMobile from "../utils/checkMobile";
 
 import { Icon, Text, TextInput } from "../components/atoms";
 
 import { colors, spacing, styleUtils, textSizes, typography } from "../styles";
 
-
 const ContactFormView = () => {
+    const isMobile = checkIsMobile();
 
     return (
         <Grid container spacing={1}>
@@ -73,10 +73,9 @@ const ContactFormView = () => {
                         placeholder="Your Mobile*"
                     />
                 </FormControl>
-            </Grid>
-            <Grid item xs={6}>
                 <FormControl
                     variant="standard"
+                    sx={{ marginTop: styleUtils.pxToRem("12px") }}
                 >
                     <StyledFormLabel>
                         Message
@@ -93,21 +92,60 @@ const ContactFormView = () => {
                         }}
                     />
                 </FormControl>
+                <Button
+                    variant="contained"
+                    sx={{
+                        width: styleUtils.pxToRem("155px"),
+                        height: styleUtils.pxToRem("50px"),
+                        margin: "auto",
+                        fontSize: textSizes.xl,
+                        backgroundColor: colors.blackText,
+                        color: colors.white,
+                        marginTop: spacing.s,
+                        marginLeft: spacing.xxl,
+                    }}
+                >
+                    Enquire Now
+                </Button>
             </Grid>
-            <Button
-                variant="contained"
-                sx={{
-                    width: styleUtils.pxToRem("155px"),
-                    height: styleUtils.pxToRem("50px"),
-                    margin: "auto",
-                    fontSize: textSizes.xl,
-                    backgroundColor: colors.blackText,
-                    color: colors.white,
-                    marginTop: spacing.s,
-                }}
-            >
-                Enquire Now
-            </Button>
+            {!isMobile &&
+                <>
+                    <Grid item xs={6}>
+                        <FormControl
+                            variant="standard"
+                        >
+                            <StyledFormLabel>
+                                Message
+                            </StyledFormLabel>
+                            <StyleTextInput
+                                name="note"
+                                placeholder="Message"
+                                //   onChange={handleNoteChange}
+                                inputProps={{ style: { height: 210, overflow: "auto" } }}
+                                multiline
+                                sx={{
+                                    // width: styleUtils.pxToRem(isMobile ? "304px" : "432px"),
+                                    // height: styleUtils.pxToRem("159px"),
+                                }}
+                            />
+                        </FormControl>
+                    </Grid>
+                    <Button
+                        variant="contained"
+                        sx={{
+                            width: styleUtils.pxToRem("155px"),
+                            height: styleUtils.pxToRem("50px"),
+                            margin: "auto",
+                            fontSize: textSizes.xl,
+                            backgroundColor: colors.blackText,
+                            color: colors.white,
+                            marginTop: spacing.s,
+                        }}
+                    >
+                        Enquire Now
+                    </Button>
+                </>
+            }
         </Grid>
     );
 
