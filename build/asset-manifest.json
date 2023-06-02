@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/real-estate-js/static/css/main.7f74d25e.css",
+    "main.js": "/real-estate-js/static/js/main.b350c7ab.js",
+    "static/media/shekpara.jpeg": "/real-estate-js/static/media/shekpara.eeff6fa2bf36c4a6c99f.jpeg",
+    "static/media/tirumala.png": "/real-estate-js/static/media/tirumala.d2916fa7a35f318783d2.png",
+    "static/media/cover.jpeg": "/real-estate-js/static/media/cover.76409d112856f5842724.jpeg",
+    "static/media/garden.jpg": "/real-estate-js/static/media/garden.cd53c90699f7f83b258a.jpg",
+    "static/media/nest.jpg": "/real-estate-js/static/media/nest.f556a11c90c3f394cade.jpg",
+    "static/media/tower.jpg": "/real-estate-js/static/media/tower.fd4ea2ef06266d99872f.jpg",
+    "static/media/arrow-back.svg": "/real-estate-js/static/media/arrow-back.b30f9e028b684824ca7f411bb0c60d8c.svg",
+    "static/media/buildingblock.svg": "/real-estate-js/static/media/buildingblock.89f922f0f79fc6fbe580d11d255b66d1.svg",
+    "index.html": "/real-estate-js/index.html",
+    "main.7f74d25e.css.map": "/real-estate-js/static/css/main.7f74d25e.css.map",
+    "main.b350c7ab.js.map": "/real-estate-js/static/js/main.b350c7ab.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7f74d25e.css",
+    "static/js/main.b350c7ab.js"
+  ]
+}
