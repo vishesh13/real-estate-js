@@ -44,7 +44,7 @@ const Projects = () => {
             textAlign: "center",
             margin: "0 240px",
             lineHeight: 1.2,
-            marginBottom: spacing.l,
+            marginBottom: spacing.m,
           }}
         >
           Our Projects
