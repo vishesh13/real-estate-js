@@ -1,21 +1,15 @@
 import { Grid } from "@mui/material";
-import NavigationBar from "../NavigationBar/NavigationBar";
-import DetailsView from "../DetailsView/DetailsView";
-import Projects from "../Projects/Projects";
+import NavigationWrapper from "../NavigationBar/NavigationWrapper";
+import DetailsViewWrapper from "../DetailsView/DetailsViewWrapper";
+import ProjectsWrapper from "../Projects/ProjectsWrapper";
 import Footer from "../Footer/Footer"
 
 const HomeView = () => {
   return (
     <Grid container spacing={2}>
-      <Grid item xs={12}>
-        <NavigationBar />
-      </Grid>
-      <Grid item xs={12}>
-        <DetailsView />
-      </Grid>
-      <Grid item xs={12}>
-        <Projects />
-      </Grid>
+        <NavigationWrapper />
+        <DetailsViewWrapper />
+        <ProjectsWrapper />
       <Grid item xs={12}>
         <Footer />
       </Grid>

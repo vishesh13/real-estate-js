@@ -5,7 +5,7 @@ import { Icon, Text } from "../../atoms";
 import { images } from "../../../assets/images";
 // import useIsMobile from "../../../hooks/useIsMobile";
 
-const ProjectCard = ({ item, cardStyle }) => {
+const ProjectCard = ({ item, cardStyle, imageStyle }) => {
   // const isMobile = useIsMobile();
   return (
     <Card
@@ -22,15 +22,17 @@ const ProjectCard = ({ item, cardStyle }) => {
           // flex: 1,
         }}
       >
-            <Text size="l" weight="bold" color={colors.blackText}>
-              {item.name}
-            </Text>
-          <img
-            alt="“"
-            src={images["projects"][item.image]}
-            style={{ width: 282, height: 190 }}
-          />
-        </div>
+        <Text size="l" weight="bold" color={colors.blackText}>
+          {item.name}
+        </Text>
+        <img
+          alt="“"
+          src={images["projects"][item.image]}
+          style={{
+            ...imageStyle
+          }}
+        />
+      </div>
     </Card>
   );
 };

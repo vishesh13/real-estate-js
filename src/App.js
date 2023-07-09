@@ -4,7 +4,6 @@ import { theme } from "./styles";
 import HomeView from "./containers/HomeView/HomeView";
 import "./App.css";
 
-
 const App = () => {
     return (
       <Container id="APP_CONTAINER">
