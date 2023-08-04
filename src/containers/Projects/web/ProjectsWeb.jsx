@@ -32,12 +32,7 @@ const ProjectsWeb = ({ convertArrayIntoChunks }) => {
                     <Text
                         size="xxxl"
                         weight="semibold"
-                        style={{
-                            textAlign: "center",
-                            margin: "0 240px",
-                            lineHeight: 1.2,
-                            marginBottom: spacing.m,
-                        }}
+                        style={{ margin: spacing.m, textAlign: "center", textDecoration: "underline" }}
                     >
                         Our Projects
                     </Text>
@@ -57,12 +52,15 @@ const ProjectsWeb = ({ convertArrayIntoChunks }) => {
                                         item={i}
                                         key={index}
                                         cardStyle={{
-                                            width: 412,
+                                            borderRadius: 15,
                                             marginBottom: spacing.s,
+                                            width: 412,
+                                            padding: spacing.xxl,
                                         }}
                                         imageStyle={{
                                             width: 282, 
-                                            height: 190
+                                            height: 190,
+                                            borderRadius: 15,
                                         }}
                                     />
                                 ))}

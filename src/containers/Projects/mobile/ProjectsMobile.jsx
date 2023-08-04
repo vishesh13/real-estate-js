@@ -34,21 +34,20 @@ const ProjectsMobile = ({ convertArrayIntoChunks }) => {
                         size="xxl"
                         weight="semibold"
                         style={{
-                            textAlign: "center",
                             lineHeight: 1.2,
                             marginBottom: spacing.m,
+                            textAlign: "center", 
+                            textDecoration: "underline"
                         }}
                     >
                         Our Projects
                     </Text>
-                    <MultiItemCarousel interval={8000}>
+                    <MultiItemCarousel interval={8000000}>
                         {convertArrayIntoChunks(COMPLETED_PROJECTS, 1).map((j, jindex) => (
                             <div
                                 key={jindex}
                                 style={{
-                                    display: "flex",
-                                    alignItems: "center",
-                                    justifyContent: "space-evenly",
+                                    margin: "auto",
                                 }}
                             >
                                 {j.map((i, index) => (
@@ -56,12 +55,15 @@ const ProjectsMobile = ({ convertArrayIntoChunks }) => {
                                         item={i}
                                         key={index}
                                         cardStyle={{
+                                            borderRadius: 10,
+                                            marginBottom: spacing.xs,
+                                            padding: spacing.l,
                                             width: 240,
-                                            marginBottom: spacing.s,
                                         }}
                                         imageStyle={{
+                                            borderRadius: 10,
+                                            height: 190,
                                             width: 182, 
-                                            height: 190
                                         }}
                                     />
                                 ))}
