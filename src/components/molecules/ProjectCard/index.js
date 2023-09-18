@@ -1,36 +1,30 @@
 import { Card } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import { spacing, colors } from "../../../styles";
-import { Icon, Text } from "../../atoms";
+import { Text } from "../../atoms";
 import { images } from "../../../assets/images";
-// import useIsMobile from "../../../hooks/useIsMobile";
 
-const ProjectCard = ({ item, cardStyle }) => {
-  // const isMobile = useIsMobile();
+const ProjectCard = ({ item, cardStyle, imageStyle }) => {
+
   return (
     <Card
       sx={{
         ...cardStyle,
-        padding: spacing.xxl,
       }}
     >
-      <div
+      <img
+        alt="“"
+        src={images["projects"][item.image]}
         style={{
-          // display: "flex",
-          // flexDirection: "row",
-          // justifyContent: "space-between",
-          // flex: 1,
+          ...imageStyle
         }}
-      >
-            <Text size="l" weight="bold" color={colors.blackText}>
-              {item.name}
-            </Text>
-          <img
-            alt="“"
-            src={images["projects"][item.image]}
-            style={{ width: 282, height: 190 }}
-          />
-        </div>
+      />
+      <Text size="l" weight="semibold" color={colors.blackText} sx={{marginTop: spacing.xs}}>
+        {item.name}
+      </Text>
+      <Text size="m" weight="medium" color={colors.blackText} sx={{marginTop: spacing.xs}}>
+        {item.address}
+      </Text>
     </Card>
   );
 };

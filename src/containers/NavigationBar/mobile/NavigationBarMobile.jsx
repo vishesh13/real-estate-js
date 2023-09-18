@@ -2,12 +2,10 @@ import { AppBar, Box, Container, Toolbar, Button } from "@mui/material";
 import { styled } from "@mui/material/styles";
 
 import PhoneIcon from '@mui/icons-material/Phone';
-import checkIsMobile from "../../utils/checkMobile";
-import { Icon, Text } from "../../components/atoms"
-import { colors, spacing, styleUtils, textSizes } from "../../styles";
+import { Icon, Text } from "../../../components/atoms"
+import { colors, spacing, styleUtils, textSizes } from "../../../styles";
 
-const NavigationBar = () => {
-  const isMobile = checkIsMobile();
+const NavigationBarMobile = () => {
 
   return (
     <NavBar
@@ -19,31 +17,21 @@ const NavigationBar = () => {
           <StyledBox>
             <Icon
               name="buildingBlock"
-              size={isMobile ? 24 : 41}
+              size={24}
               color={colors.blackText}
               style={{ marginRight: spacing.xs }}
             />
             <Text
               color={colors.blackText}
               weight="semibold"
-              size={isMobile ? "l" : "xxxl"}
+              size="m"
             >
               Ishanika Developers
             </Text>
           </StyledBox>
-          {!isMobile &&
-            <Box sx={{ display: "flex", flex: 1 }} />
-          }
           <Box display="flex" alignItems="center">
-            <ContactButton
-              variant="text"
-              sx={{
-                width: styleUtils.pxToRem(isMobile ? "125px" : "155px"),
-                height: styleUtils.pxToRem(isMobile ? "35px" : "50px"),
-                fontSize: isMobile ? textSizes.m : textSizes.xl,
-              }}
-            >
-              <PhoneIcon fontSize={isMobile ? "small" : "large"} /> 8588022019
+            <ContactButton variant="text">
+              <PhoneIcon fontSize="small" style={{marginRight: spacing.xxs}}/> 8588022019
             </ContactButton>
           </Box>
         </Toolbar>
@@ -52,7 +40,7 @@ const NavigationBar = () => {
   )
 }
 
-export default NavigationBar;
+export default NavigationBarMobile;
 
 const StyledBox = styled(Box)`
   display: inline-flex;
@@ -69,6 +57,9 @@ const NavBar = styled(AppBar)`
 
 const ContactButton = styled(Button)`
   color: ${colors.blackText};
-  justify-content: space-between;
+  justify-content: center;
   margin-left: ${spacing.s};
+  width: ${styleUtils.pxToRem("125px")};
+  height: ${styleUtils.pxToRem("30px")};
+  font-size: ${textSizes.s};
 `;
