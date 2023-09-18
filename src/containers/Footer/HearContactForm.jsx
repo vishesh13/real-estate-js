@@ -1,113 +1,128 @@
-
-import { Box, Button, Card, Container, FormControl, FormLabel, Grid } from "@mui/material";
+import { Button, Card, FormControl, FormLabel, Grid } from "@mui/material";
 import { styled } from "@mui/material/styles";
-
-import PhoneIcon from '@mui/icons-material/Phone';
-import EmailIcon from '@mui/icons-material/Email';
-import PlaceIcon from '@mui/icons-material/Place';
-
-import checkIsMobile from "../../utils/checkMobile";
+import { useFormik } from "formik";
 
 import { Text, TextInput } from "../../components/atoms";
-import { colors, spacing, styleUtils, textSizes, typography } from "../../styles";
+import {
+  colors,
+  spacing,
+  styleUtils,
+  textSizes,
+  typography,
+} from "../../styles";
 
 const HearContactForm = () => {
+  const formik = useFormik({
+    initialValues: {
+      fullName: "",
+      email: "",
+      phone: "",
+      message: "",
+    },
+    onSubmit: () => {
+      if (window.Email) {
+        window.Email.send({
+          ...emailConfig,
+          // From: formik.values.email, //Sender's email
+          Body: `Hi,\n
+           My name is ${formik.values.fullName},and here follows my details.\n
+           Email: ${formik.values.email},\n
+           Contact: ${formik.values.phone},\n
+           Below is my enquiry:\n
+           ${formik.values.message}`,
+        }).then(() => {
+          <Stack sx={{ width: "100%" }} spacing={2}>
+            <Alert severity="success">Enquiry submitted</Alert>
+          </Stack>;
+        });
+      }
+    },
+  });
 
-    return (
-        <Grid item md={6}>
-            <Card
-                style={{
-                    borderRadius: spacing.m,
-                    background: "#fed835",
-                    padding: "2rem",
-                }}
+  return (
+    <Grid item md={6}>
+      <Card
+        style={{
+          borderRadius: spacing.m,
+          background: "#fed835",
+          padding: "2rem",
+        }}
+      >
+        <Text
+          color={colors.blackText}
+          size="xxl"
+          weight="extrabold"
+          style={{
+            lineHeight: 1.2,
+            marginBottom: spacing.s,
+            textAlign: "center",
+          }}
+        >
+          WE’D LOVE TO HEAR FROM YOU.
+        </Text>
+
+        <StyledFormContainer>
+          <FormControl variant="standard">
+            <StyledFormLabel>Your Name</StyledFormLabel>
+            <StyleTextInput
+              name="fullName"
+              value={formik.values.fullName}
+              onChange={formik.handleChange}
+              error={formik.touched.fullName && Boolean(formik.errors.fullName)}
+              placeholder="Your Name*"
+            />
+            {formik.touched.fullName && Boolean(formik.errors.fullName) && (
+              <FormHelperText className="form-error-field">
+                {formik.errors.fullName}
+              </FormHelperText>
+            )}
+
+            <StyledFormLabel>Email</StyledFormLabel>
+            <StyleTextInput
+              name="email"
+              value={formik.values.email}
+              onChange={formik.handleChange}
+              error={formik.touched.email && Boolean(formik.errors.email)}
+              placeholder="Your Email*"
+            />
+            {formik.touched.email && Boolean(formik.errors.email) && (
+              <FormHelperText className="form-error-field">
+                {formik.errors.email}
+              </FormHelperText>
+            )}
+
+            <StyledFormLabel>Mobile</StyledFormLabel>
+            <StyleTextInput
+              name="phone"
+              value={formik.values.phone}
+              onChange={formik.handleChange}
+              error={formik.touched.phone && Boolean(formik.errors.phone)}
+              placeholder="Your Mobile*"
+            />
+
+            <StyledFormLabel>Message</StyledFormLabel>
+            <StyleTextInput
+              name="message"
+              placeholder="Message"
+              onChange={formik.handleChange}
+              inputProps={{ style: { height: 210, overflow: "auto" } }}
+              multiline
+            />
+            <SubmitBtn
+              variant="contained"
+              onClick={formik.handleSubmit}
+              sx={{
+                height: styleUtils.pxToRem("50px"),
+              }}
             >
-                <Text
-                    color={colors.blackText}
-                    size="xxl"
-                    weight="extrabold"
-                    style={{ lineHeight: 1.2, marginBottom: spacing.s, textAlign: "center" }}
-                >
-                    WE’D LOVE TO HEAR FROM YOU.
-                </Text>
-
-                <StyledFormContainer>
-
-                    <FormControl variant="standard">
-
-                        <StyledFormLabel>
-                            Your Name
-                        </StyledFormLabel>
-                        <StyleTextInput
-                            name="fullName"
-                            //   value={formik.values.fullName}
-                            //   onChange={formik.handleChange}
-                            //   error={formik.touched.fullName && Boolean(formik.errors.fullName)}
-                            placeholder="Your Name*"
-                        />
-                        {/* {formik.touched.fullName && Boolean(formik.errors.fullName) && (
-          <FormHelperText className="form-error-field">
-            {formik.errors.fullName}
-          </FormHelperText>
-        )} */}
-
-                        <StyledFormLabel>
-                            Email
-                        </StyledFormLabel>
-                        <StyleTextInput
-                            name="email"
-                            //   value={formik.values.email}
-                            //   onChange={formik.handleChange}
-                            //   error={formik.touched.email && Boolean(formik.errors.email)}
-                            placeholder="Your Email*"
-                        />
-                        {/* {formik.touched.email && Boolean(formik.errors.email) && (
-          <FormHelperText className="form-error-field">
-            {formik.errors.email}
-          </FormHelperText>
-        )} */}
-
-
-
-                        <StyledFormLabel>
-                            Mobile
-                        </StyledFormLabel>
-                        <StyleTextInput
-                            name="phone number"
-                            //   value={formik.values.fullName}
-                            //   onChange={formik.handleChange}
-                            //   error={formik.touched.fullName && Boolean(formik.errors.fullName)}
-                            placeholder="Your Mobile*"
-                        />
-
-                        <StyledFormLabel>
-                            Message
-                        </StyledFormLabel>
-                        <StyleTextInput
-                            name="note"
-                            placeholder="Message"
-                            //   onChange={handleNoteChange}
-                            inputProps={{ style: { height: 210, overflow: "auto" } }}
-                            multiline
-                            sx={{
-                                // width: styleUtils.pxToRem(isMobile ? "304px" : "432px"),
-                                // height: styleUtils.pxToRem("159px"),
-                            }}
-                        />
-                        <SubmitBtn
-                            variant="contained"
-                            sx={{
-                                height: styleUtils.pxToRem("50px"),
-                            }}
-                        >
-                            Submit
-                        </SubmitBtn>
-                    </FormControl>
-                </StyledFormContainer>
-            </Card>
-        </Grid>
-    )
-}
+              Submit
+            </SubmitBtn>
+          </FormControl>
+        </StyledFormContainer>
+      </Card>
+    </Grid>
+  );
+};
 
 export default HearContactForm;
 
