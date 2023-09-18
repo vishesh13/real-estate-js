@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.7f74d25e.css",
-    "main.js": "/static/js/main.bbe08378.js",
+    "main.js": "/static/js/main.3183669e.js",
     "static/media/shekpara.jpeg": "/static/media/shekpara.eeff6fa2bf36c4a6c99f.jpeg",
     "static/media/tirumala.png": "/static/media/tirumala.d2916fa7a35f318783d2.png",
     "static/media/cover.jpeg": "/static/media/cover.76409d112856f5842724.jpeg",
@@ -12,10 +12,10 @@
     "static/media/buildingblock.svg": "/static/media/buildingblock.89f922f0f79fc6fbe580d11d255b66d1.svg",
     "index.html": "/index.html",
     "main.7f74d25e.css.map": "/static/css/main.7f74d25e.css.map",
-    "main.bbe08378.js.map": "/static/js/main.bbe08378.js.map"
+    "main.3183669e.js.map": "/static/js/main.3183669e.js.map"
   },
   "entrypoints": [
     "static/css/main.7f74d25e.css",
-    "static/js/main.bbe08378.js"
+    "static/js/main.3183669e.js"
   ]
 }
