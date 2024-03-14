@@ -113,7 +113,7 @@ const Footer = () => {
                   weight="meidum"
                   style={{ marginTop: spacing.xs, display: "inline-flex" }}
                 >
-                  <PlaceIcon color="#808080" style={{ marginRight: spacing.xs }} /> Ishanika Developers Pvt. Ltd. <br />
+                  <PlaceIcon color="#808080" style={{ marginRight: spacing.xs }} /> Ishanika Developers Pvt Ltd <br />
                   16 India Exchange Place Kolkata-700001. <br />
                   Landmark: Calcutta Stock Exchange
                 </Text>

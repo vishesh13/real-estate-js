@@ -24,6 +24,6 @@ export const ONGOING_PROJS_DETAILS = [
         img_path: "/images/ongoing/tirumala.jpg",
         name: "OM TIRUMALA",
         type: "Apartment",
-        description: "64/2/1 & 64/2 SHEIKH PARA LANE, P.S SHIBPUR, DISTRICT – HOWRAH",
+        description: "64/2/1 &amp; 64/4 Seikh Para Lane, Shibpur, Near Nabbana Bus Stand",
     },
 ];

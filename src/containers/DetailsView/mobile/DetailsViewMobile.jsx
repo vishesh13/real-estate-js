@@ -31,7 +31,7 @@ const DetailsViewMobile = () => {
                     }}
                 >
                     <Text weight="bold" size="xxl" color={colors.blackText}>
-                        Ishanika Developers
+                        Ishanika Developers Pvt Ltd
                     </Text>
                     <Text size="s" weight="semibold" color={colors.blackText}>
                         BUILDING DREAM HOMES SINCE 1991

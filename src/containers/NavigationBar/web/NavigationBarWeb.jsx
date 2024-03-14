@@ -27,7 +27,7 @@ const NavigationBarWeb = () => {
                                 weight="semibold"
                                 size="xxxl"
                             >
-                                Ishanika Developers
+                                Ishanika Developers Pvt. Ltd.
                             </Text>
                         </StyledBox>
                         <Box sx={{ display: "flex", flex: 1 }} />

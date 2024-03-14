@@ -25,6 +25,9 @@ const ProjectCard = ({ item, cardStyle, imageStyle }) => {
       <Text size="m" weight="medium" color={colors.blackText} sx={{marginTop: spacing.xs}}>
         {item.address}
       </Text>
+      <Text size="m" weight="medium" color={colors.blackText} sx={{marginTop: spacing.xxs}}>
+        {item.landmark}
+      </Text>
     </Card>
   );
 };

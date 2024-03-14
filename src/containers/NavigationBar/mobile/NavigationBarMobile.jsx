@@ -26,7 +26,7 @@ const NavigationBarMobile = () => {
               weight="semibold"
               size="m"
             >
-              Ishanika Developers
+              Ishanika Developers Pvt Ltd
             </Text>
           </StyledBox>
           <Box display="flex" alignItems="center">
