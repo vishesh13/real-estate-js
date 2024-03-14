@@ -9,7 +9,7 @@ export const COMPLETED_PROJECTS = [
     name: "OM Nest",
     image: "nest",
     address: "12/4 Circular 2nd bye lane, Shibpur 711103",
-    landmark: "Shibpur",
+    landmark: "Landmark: Shibpur",
   },
   {
     name: "OM Tower",
